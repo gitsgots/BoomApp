@@ -1,13 +1,14 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="6211" systemVersion="14A298i" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" initialViewController="BYZ-38-t0r">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="10117" systemVersion="15F34" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" initialViewController="BYZ-38-t0r">
     <dependencies>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="6204"/>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="10085"/>
     </dependencies>
     <scenes>
         <!--View Controller-->
         <scene sceneID="tne-QT-ifu">
             <objects>
-                <viewController id="BYZ-38-t0r" customClass="ViewController" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController id="BYZ-38-t0r" customClass="ViewController" customModule="War" customModuleProvider="target" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="y3c-jy-aDJ"/>
                         <viewControllerLayoutGuide type="bottom" id="wfy-db-euE"/>
@@ -15,11 +16,163 @@
                     <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
                         <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" ambiguous="YES" image="back" translatesAutoresizingMaskIntoConstraints="NO" id="U9b-Zf-tv7" userLabel="firstCard">
+                                <rect key="frame" x="0.0" y="215" width="120" height="170"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="120" id="GKZ-Uo-CFI"/>
+                                    <constraint firstAttribute="height" constant="170" id="KoR-OR-OV2"/>
+                                </constraints>
+                                <variation key="heightClass=compact" ambiguous="YES" misplaced="YES">
+                                    <rect key="frame" x="78" y="115" width="120" height="170"/>
+                                </variation>
+                            </imageView>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" ambiguous="YES" image="back" translatesAutoresizingMaskIntoConstraints="NO" id="QDR-L4-fe0" userLabel="secondCard">
+                                <rect key="frame" x="0.0" y="215" width="120" height="170"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="170" id="AyI-eo-9Gv"/>
+                                    <constraint firstAttribute="width" constant="120" id="JJY-aO-9IO"/>
+                                </constraints>
+                            </imageView>
+                            <button opaque="NO" contentMode="scaleToFill" ambiguous="YES" misplaced="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="hFg-wW-WYu">
+                                <rect key="frame" x="260" y="0.0" width="82" height="31"/>
+                                <state key="normal" image="dealbutton" backgroundImage="dealbutton"/>
+                                <variation key="heightClass=compact" misplaced="YES">
+                                    <rect key="frame" x="260" y="319" width="82" height="31"/>
+                                </variation>
+                                <connections>
+                                    <action selector="playRoundTapped:" destination="BYZ-38-t0r" eventType="touchUpInside" id="tbV-vS-2aQ"/>
+                                </connections>
+                            </button>
+                            <stackView opaque="NO" contentMode="scaleToFill" ambiguous="YES" axis="vertical" translatesAutoresizingMaskIntoConstraints="NO" id="dJN-VE-ekb">
+                                <rect key="frame" x="239" y="0.0" width="122" height="67"/>
+                                <subviews>
+                                    <stackView opaque="NO" contentMode="scaleToFill" ambiguous="YES" axis="vertical" translatesAutoresizingMaskIntoConstraints="NO" id="e2Q-rw-LFr">
+                                        <rect key="frame" x="0.0" y="0.0" width="122" height="67"/>
+                                        <subviews>
+                                            <stackView opaque="NO" contentMode="scaleToFill" ambiguous="YES" axis="vertical" translatesAutoresizingMaskIntoConstraints="NO" id="wR3-ut-ncr">
+                                                <rect key="frame" x="0.0" y="0.0" width="122" height="67"/>
+                                                <subviews>
+                                                    <stackView opaque="NO" contentMode="scaleToFill" ambiguous="YES" axis="vertical" translatesAutoresizingMaskIntoConstraints="NO" id="gz2-sN-2o7">
+                                                        <rect key="frame" x="0.0" y="0.0" width="122" height="67"/>
+                                                        <subviews>
+                                                            <stackView opaque="NO" contentMode="scaleToFill" ambiguous="YES" translatesAutoresizingMaskIntoConstraints="NO" id="6fJ-M9-il2">
+                                                                <rect key="frame" x="0.0" y="0.0" width="122" height="67"/>
+                                                                <subviews>
+                                                                    <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" ambiguous="YES" image="logo" translatesAutoresizingMaskIntoConstraints="NO" id="mgw-EP-xKF" userLabel="Logo">
+                                                                        <rect key="frame" x="0.0" y="0.0" width="122" height="67"/>
+                                                                        <rect key="contentStretch" x="0.75" y="0.0" width="1" height="1"/>
+                                                                        <variation key="heightClass=compact" ambiguous="YES">
+                                                                            <rect key="frame" x="0.0" y="0.0" width="122" height="67"/>
+                                                                        </variation>
+                                                                        <variation key="heightClass=regular-widthClass=compact" ambiguous="YES">
+                                                                            <rect key="frame" x="0.0" y="0.0" width="122" height="67"/>
+                                                                        </variation>
+                                                                    </imageView>
+                                                                </subviews>
+                                                                <constraints>
+                                                                    <constraint firstItem="mgw-EP-xKF" firstAttribute="centerX" secondItem="6fJ-M9-il2" secondAttribute="centerX" id="Axf-Uq-kUl"/>
+                                                                    <constraint firstItem="mgw-EP-xKF" firstAttribute="centerX" secondItem="6fJ-M9-il2" secondAttribute="centerX" id="QXo-dO-Mep"/>
+                                                                    <constraint firstItem="mgw-EP-xKF" firstAttribute="centerX" secondItem="6fJ-M9-il2" secondAttribute="centerX" id="ZAP-yc-tV4"/>
+                                                                    <constraint firstItem="mgw-EP-xKF" firstAttribute="top" secondItem="6fJ-M9-il2" secondAttribute="top" id="oUO-k4-sby"/>
+                                                                </constraints>
+                                                                <variation key="default">
+                                                                    <mask key="constraints">
+                                                                        <exclude reference="Axf-Uq-kUl"/>
+                                                                        <exclude reference="QXo-dO-Mep"/>
+                                                                        <exclude reference="oUO-k4-sby"/>
+                                                                    </mask>
+                                                                </variation>
+                                                                <variation key="heightClass=compact" ambiguous="YES">
+                                                                    <rect key="frame" x="0.0" y="0.0" width="122" height="67"/>
+                                                                    <mask key="constraints">
+                                                                        <include reference="QXo-dO-Mep"/>
+                                                                    </mask>
+                                                                </variation>
+                                                                <variation key="heightClass=regular-widthClass=compact" axis="vertical" ambiguous="YES">
+                                                                    <rect key="frame" x="0.0" y="0.0" width="122" height="67"/>
+                                                                    <mask key="constraints">
+                                                                        <include reference="Axf-Uq-kUl"/>
+                                                                        <include reference="oUO-k4-sby"/>
+                                                                    </mask>
+                                                                </variation>
+                                                            </stackView>
+                                                        </subviews>
+                                                    </stackView>
+                                                </subviews>
+                                            </stackView>
+                                        </subviews>
+                                    </stackView>
+                                </subviews>
+                                <variation key="heightClass=regular-widthClass=compact" ambiguous="YES">
+                                    <rect key="frame" x="139" y="0.0" width="122" height="67"/>
+                                </variation>
+                            </stackView>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="newbackground" translatesAutoresizingMaskIntoConstraints="NO" id="bM9-Ow-jfY" userLabel="Background">
+                                <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
+                            </imageView>
+                        </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstAttribute="trailing" secondItem="QDR-L4-fe0" secondAttribute="trailing" constant="150" id="4oR-F1-FvR"/>
+                            <constraint firstItem="wfy-db-euE" firstAttribute="top" secondItem="hFg-wW-WYu" secondAttribute="bottom" constant="200" id="AZj-UN-hhF"/>
+                            <constraint firstItem="hFg-wW-WYu" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="LJy-sL-S96"/>
+                            <constraint firstItem="QDR-L4-fe0" firstAttribute="centerY" secondItem="8bC-Xf-vdC" secondAttribute="centerY" id="MCL-Cz-Jto"/>
+                            <constraint firstItem="bM9-Ow-jfY" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leading" id="chC-la-Hgd"/>
+                            <constraint firstAttribute="bottom" secondItem="hFg-wW-WYu" secondAttribute="bottom" constant="50" id="cpd-Jj-bzA"/>
+                            <constraint firstAttribute="trailing" secondItem="QDR-L4-fe0" secondAttribute="trailing" constant="50" id="h2m-un-trk"/>
+                            <constraint firstItem="dJN-VE-ekb" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="jvt-3u-i95"/>
+                            <constraint firstAttribute="bottom" secondItem="bM9-Ow-jfY" secondAttribute="bottom" id="kcE-r1-rg7"/>
+                            <constraint firstItem="U9b-Zf-tv7" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leading" constant="50" id="kxY-Z3-VLm"/>
+                            <constraint firstItem="U9b-Zf-tv7" firstAttribute="centerY" secondItem="8bC-Xf-vdC" secondAttribute="centerY" id="p00-bX-FAK"/>
+                            <constraint firstAttribute="trailing" secondItem="bM9-Ow-jfY" secondAttribute="trailing" id="rJe-P4-4jN"/>
+                            <constraint firstItem="bM9-Ow-jfY" firstAttribute="top" secondItem="8bC-Xf-vdC" secondAttribute="top" id="sQ8-5h-NGa"/>
+                            <constraint firstItem="U9b-Zf-tv7" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leading" constant="150" id="xGE-Gj-ePq"/>
+                        </constraints>
+                        <variation key="default">
+                            <mask key="constraints">
+                                <exclude reference="4oR-F1-FvR"/>
+                                <exclude reference="h2m-un-trk"/>
+                                <exclude reference="kxY-Z3-VLm"/>
+                                <exclude reference="xGE-Gj-ePq"/>
+                                <exclude reference="cpd-Jj-bzA"/>
+                                <exclude reference="AZj-UN-hhF"/>
+                            </mask>
+                        </variation>
+                        <variation key="heightClass=compact">
+                            <mask key="constraints">
+                                <include reference="4oR-F1-FvR"/>
+                                <include reference="cpd-Jj-bzA"/>
+                            </mask>
+                        </variation>
+                        <variation key="heightClass=compact-widthClass=regular">
+                            <mask key="constraints">
+                                <include reference="xGE-Gj-ePq"/>
+                            </mask>
+                        </variation>
+                        <variation key="heightClass=regular-widthClass=compact">
+                            <mask key="constraints">
+                                <include reference="h2m-un-trk"/>
+                                <include reference="kxY-Z3-VLm"/>
+                                <include reference="AZj-UN-hhF"/>
+                            </mask>
+                        </variation>
                     </view>
+                    <connections>
+                        <outlet property="Background" destination="bM9-Ow-jfY" id="Uic-o4-C08"/>
+                        <outlet property="DealButton" destination="hFg-wW-WYu" id="VJc-6R-ISx"/>
+                        <outlet property="FirstCardImage" destination="U9b-Zf-tv7" id="foN-vg-87T"/>
+                        <outlet property="SecondCardImage" destination="QDR-L4-fe0" id="j9i-QH-OXv"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
         </scene>
     </scenes>
+    <resources>
+        <image name="back" width="120" height="170"/>
+        <image name="dealbutton" width="82" height="31"/>
+        <image name="logo" width="122" height="67"/>
+        <image name="newbackground" width="667" height="622"/>
+    </resources>
 </document>
